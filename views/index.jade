@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  header
+    img(src='images/logo.png')
+  
+  main.menu
+    button#request-att(onclick='requestAtt()')
+      img(src='images/ic-number.png')
+      |Solicitar Atención
+
+    button
+      img(src='images/ic-services.png')
+      |Servicios
+
+    button
+      img(src='images/ic-calendar.png')
+      |Agendar Atención
+
+  template#generating
+    h1 Generando ticket de atención...
+
+  template#success
+    p Su número de atención es
+    h1
+    p El tiempo de atención estimado es
+    h2
+    button(onclick='gohome()') Volver
+    
+  template#error
+    h1
+    button(onclick='gohome()') Volver

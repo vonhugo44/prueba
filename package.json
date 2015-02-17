@@ -1,0 +1,33 @@
+{
+  "name": "signalr",
+  "title": "signalr",
+  "description": ".",
+  "version": "0.0.1",
+  "private": true,
+  "license": "None",
+  "author": "PaloAlto And Company <hsanchez@paloaltoandcompany.com> (http://paloaltoandcompany.com)",
+  "contributors": [
+    "Hugo Sanchez <hsanchez@paloaltoandcompany.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vonhugo44/prueba.git"
+  },
+  "scripts": {
+    "postinstall": "bower install && node install/statics",
+    "start": "grunt && NODE_ENV=production node ./bin/www",
+    "update": "npm update --save && npm update --save-dev && bower update --save && bower update --save-dev",
+    "dev": "NODE_ENV=development DEBUG=app:* node ./bin/www"
+  },    
+    
+  "dependencies": {
+    "body-parser": "~1.10.2",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "express": "~4.11.1",
+    "jade": "~1.9.1",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0",
+    "signalr-client": "0.0.7"
+  }  
+}
